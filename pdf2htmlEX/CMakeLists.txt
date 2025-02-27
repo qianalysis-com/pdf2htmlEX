@@ -22,6 +22,13 @@ add_custom_target(dist
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 find_package(PkgConfig)
+pkg_check_modules(GLIB2 REQUIRED glib-2.0 gio-2.0)
+
+include_directories(${GLIB2_INCLUDE_DIRS})
+link_directories(${GLIB2_LIBRARY_DIRS})
+add_definitions(${GLIB2_CFLAGS_OTHER})
+
+set(PDF2HTMLEX_LIBS ${PDF2HTMLEX_LIBS} ${GLIB2_LIBRARIES})
 
 
 # SINCE we have a very intimate relationship with a particular version of 
