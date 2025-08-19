@@ -48,6 +48,13 @@ cmake        		                        \
   -DSPHINX_USE_VENV:BOOL=OFF                \
   -DREAL_TYPE:ENUM="double"                 \
   -DTHEME:ENUM="tango"                      \
+  -DENABLE_GUI=OFF \
+  -DENABLE_PYTHON_EXTENSION=OFF \
+  -DENABLE_PYTHON_SCRIPTING=OFF \
+  -DBUILD_TESTING=OFF \
+  -DENABLE_DOCS=OFF \
+  -DENABLE_NLS=OFF \
+  -DBUILD_SHARED_LIBS=OFF \
   ..
 
 # Apply any patches required for fontforge raw sources before we make
